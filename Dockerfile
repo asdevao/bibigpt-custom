@@ -6,7 +6,7 @@ RUN npm config set registry https://registry.npmmirror.com \
 
 FROM node:18-alpine AS builder
 WORKDIR /app
-ARG NEXT_PUBLIC_SITE_URL=http://125.77.202.194:19368
+ARG NEXT_PUBLIC_SITE_URL=http://localhost:19368
 ENV NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL
 # 哑值绕过 Supabase 客户端构建期校验（自部署不用官方登录）
 ENV NEXT_PUBLIC_SUPABASE_URL=https://dummy.supabase.co
